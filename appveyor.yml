@@ -2,7 +2,10 @@ init:
   - git config --global core.autocrlf input
 build_script:
   - cmd: build.cmd
-test: off
+test:
+  assemblies:
+    - Fplyr.Tests.dll
+os: Visual Studio 2015
 version: 0.0.1.{build}
 artifacts:
   - path: bin
